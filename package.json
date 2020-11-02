@@ -1,11 +1,23 @@
 {
-  "name": "cupboard-monolith",
+  "name": "whizzes-server",
   "version": "0.1.0",
-  "description": "Cupboard POC Application for a Monolith in Fastify",
+  "description": "Back-End development for whizzes a social network application",
   "main": "src/index.ts",
-  "repository": "git@github.com:easycodex/cupboard-monolith.git",
+  "repository": "git@github.com:EstebanBorai/whizzes-server.git",
   "author": "Esteban Borai <estebanborai@gmail.com>",
   "license": "MIT",
+  "maintainers": [
+    {
+      "name": "David Arenas",
+      "email": "davejs136@gmail.com",
+      "url": "https://github.com/Davejs136"
+    },
+    {
+      "name": "Esteban Borai",
+      "email": "estebanborai@gmail.com",
+      "url": "https://github.com/EstebanBorai"
+    }
+  ],
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
