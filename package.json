@@ -21,11 +21,11 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "eslint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+    "fmt": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
-    "fastify": "^3.6.0",
-    "fastify-plugin": "^2.3.4",
+    "fastify": "^3.7.0",
+    "fastify-plugin": "^3.0.0",
     "pg": "^8.4.1",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.28",
