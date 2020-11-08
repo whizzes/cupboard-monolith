@@ -16,6 +16,11 @@
       "name": "Esteban Borai",
       "email": "estebanborai@gmail.com",
       "url": "https://github.com/EstebanBorai"
+    },
+    {
+      "name": "Jonathan Lugos",
+      "email": "kiralugos@gmail.com",
+      "url": "https://github.com/jonylugos"
     }
   ],
   "scripts": {
@@ -26,6 +31,7 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "fastify": "^3.7.0",
+    "fastify-jwt": "^2.1.3",
     "fastify-plugin": "^3.0.0",
     "pg": "^8.4.1",
     "reflect-metadata": "^0.1.13",
