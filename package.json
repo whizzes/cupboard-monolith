@@ -24,11 +24,12 @@
     }
   ],
   "scripts": {
-    "dev": "cross-env ENVIRONMENT=development ts-node-dev --respawn --transpile-only src/main.ts",
+    "build": "cross-env NODE_ENV=production tsc",
+    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --transpile-only src/main.ts",
     "eslint": "cross-env eslint . --ext .js,.jsx,.ts,.tsx",
     "fmt": "cross-env eslint . --ext .js,.jsx,.ts,.tsx --fix && prettier --write \"**/*.{json,md,yml}\"",
     "prettier": "prettier -c \"**/*.{md,json,yml,sh}\"",
-    "test": "cross-env ENVIRONMENT=testing ts-node --files node_modules/tape/bin/tape test/**/*.ts"
+    "test": "cross-env NODE_ENV=testing ts-node --files node_modules/tape/bin/tape test/**/*.ts"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
