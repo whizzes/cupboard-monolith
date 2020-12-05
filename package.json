@@ -26,7 +26,8 @@
   "scripts": {
     "dev": "cross-env ENVIRONMENT=development ts-node-dev --respawn --transpile-only src/main.ts",
     "eslint": "cross-env eslint . --ext .js,.jsx,.ts,.tsx",
-    "fmt": "cross-env eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "fmt": "cross-env eslint . --ext .js,.jsx,.ts,.tsx --fix && prettier --write \"**/*.{json,md,yml}\"",
+    "prettier": "prettier -c \"**/*.{md,json,yml,sh}\"",
     "test": "cross-env ENVIRONMENT=testing ts-node --files node_modules/tape/bin/tape test/**/*.ts"
   },
   "dependencies": {
@@ -51,7 +52,10 @@
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.2.0",
     "light-my-request": "^4.3.0",
+    "prettier": "^2.2.1",
     "sqlite3": "^5.0.0",
     "tape": "^5.0.1",
     "ts-node-dev": "^1.0.0-pre.63",
