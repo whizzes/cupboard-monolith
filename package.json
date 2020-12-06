@@ -25,6 +25,7 @@
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production tsc",
+    "debug": "cross-env NODE_ENV=development ts-node-dev  --inspect --transpile-only src/main.ts",
     "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --transpile-only src/main.ts",
     "eslint": "cross-env eslint . --ext .js,.jsx,.ts,.tsx",
     "fmt": "cross-env eslint . --ext .js,.jsx,.ts,.tsx --fix && prettier --write \"**/*.{json,md,yml}\"",
