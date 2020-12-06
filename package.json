@@ -29,6 +29,8 @@
     "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --transpile-only src/main.ts",
     "eslint": "cross-env eslint . --ext .js,.jsx,.ts,.tsx",
     "fmt": "cross-env eslint . --ext .js,.jsx,.ts,.tsx --fix && prettier --write \"**/*.{json,md,yml}\"",
+    "make:migration": "cross-env knex --knexfile src/config/knexfile.ts migrate:make",
+    "latest:migration": "cross-env knex --knexfile src/config/knexfile.ts migrate:latest",
     "prettier": "prettier -c \"**/*.{md,json,yml,sh}\"",
     "test": "cross-env NODE_ENV=testing ts-node --files node_modules/tape/bin/tape test/**/*.ts"
   },
@@ -38,14 +40,15 @@
     "fastify-cors": "^4.1.0",
     "fastify-jwt": "^2.1.3",
     "fastify-plugin": "^3.0.0",
+    "knex-stringcase": "^1.4.3",
     "pg": "^8.4.1",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.2.28",
     "uuid": "^8.3.1"
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
     "@types/dotenv": "^8.2.0",
+    "@types/knex": "^0.16.1",
     "@types/node": "^14.11.8",
     "@types/tape": "^4.13.0",
     "@types/uuid": "^8.3.0",
